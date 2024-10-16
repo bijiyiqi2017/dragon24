@@ -29,6 +29,11 @@ Hi everybody, I’m Jim, a passionate learner with a love for technology and new
 ### Ruth
 Hey, I am Ruth. I am working towards full stack development on The Odin Project. I have developed a passion for coding, and I want to learn more by doing things as well as learning from others! You can find me on Twitter/X at [lemonxx13](https://twitter.com/lemonxx13) and on GitHub at [ruth-chirwa](https://github.com/ruth-chirwa).
 
+## Code of Conduct
+
+Please note that this project is released with a [Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
