@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Added documentation for contribution guidelines in `CONTRIBUTING.md` for Hacktoberfest contributors.
 - Added `CODE_OF_CONDUCT.md` file.
 - Introduced branch creation guidelines for easier collaboration.
+- Added `LICENSE` file to the repository, clarifying the terms under which the project can be used.
 
 ### Fixed
 - Updated `README.md` with badges and improved project instructions.
