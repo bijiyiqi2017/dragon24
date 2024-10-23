@@ -34,6 +34,12 @@ p {
   margin-bottom: 10px;
 }
 
+/* Maintain the custom border color on focus */
+#user-input:focus {
+  outline: none;
+  border: 2px solid inherit; /* Inherit the current color set by JavaScript */
+}
+
 /* Button */
 button {
   font-size: 18px;
@@ -117,4 +123,4 @@ li {
   background-color: #0d6fb1;
 }
 
-}
+
