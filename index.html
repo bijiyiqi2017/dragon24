@@ -4,11 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dragon Fruit Delight</title>
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Welcome to the Dragon Fruit Delight Word Scramble Game!</h1>
-    <p>Unscramble the letters to form a word.</p>
+    <!-- Introductory Video Overlay -->
+    <div id="video-overlay">
+      <div id="video-wrapper">
+        <video id="intro-video" src="Dragon Fruit Delight.mp4" type="video/mp4"></video>
+        <div id="video-controls">
+          <button id="play-pause">Play</button>
+          <button id="close-video">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Content -->
+    <div id="game-content">
+      <h1>Welcome to the Dragon Fruit Delight Word Scramble Game!</h1>
+      <p>Unscramble the letters to form a word.</p>
+
+      <p id="scrambled-word"></p>
+      <input type="text" id="user-input" />
+      <button onclick="checkAnswer()">Check Answer</button>
+      <p id="result"></p>
+      <p><strong>How to Play:</strong></p>
+      <ol>
+        <li>A scrambled word will appear on the screen.</li>
+        <li>Type the unscrambled word into the text field.</li>
+        <li>Click the "Check Answer" button.</li>
+        <li>
+          If your answer is correct, you'll see a success message, and a new
+          scrambled word will appear.
+        </li>
+        <li>
+          If your answer is incorrect, you'll see a message asking you to try
+          again.
+        </li>
+      </ol>
+    </div>
 
 
 
@@ -41,8 +74,7 @@
         again.
       </li>
     </ol>
-    <script src="script.js"></script>
-    <!--      const words = ["apple", "banana", "orange", "grape", "kiwi" "dragon fruit" "water melon" "pine apple" "cherry" "pomegranate"]; -->
-  </body>
 
+    <script src="script.js"></script>
+  </body>
 </html>
