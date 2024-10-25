@@ -1,4 +1,3 @@
-// List of words for the game
 const levels = [
   {
     level: 1,
@@ -15,7 +14,7 @@ const levels = [
       { original: "cherry", scrambled: "yrrehc" },
       { original: "pomegranate", scrambled: "garetnapome" }
     ],
-    color: "#FFCC00" // yellow
+    color: "#FFCC00"
   },
   {
     level: 2,
@@ -32,7 +31,7 @@ const levels = [
       { original: "kangaroo", scrambled: "oraagkon" },
       { original: "panda", scrambled: "dapna" }
     ],
-    color: "#FF6600" // orange
+    color: "#FF6600"
   },
   {
     level: 3,
@@ -49,7 +48,7 @@ const levels = [
       { original: "brown", scrambled: "nworb" },
       { original: "grey", scrambled: "yerg" }
     ],
-    color: "#3399FF" // blue
+    color: "#3399FF"
   },
   {
     level: 4,
@@ -66,7 +65,7 @@ const levels = [
       { original: "omelette", scrambled: "eltetemo" },
       { original: "soup", scrambled: "puos" }
     ],
-    color: "#66CC66" // green
+    color: "#66CC66"
   },
   {
     level: 5,
@@ -83,80 +82,81 @@ const levels = [
       { original: "golf", scrambled: "flog" },
       { original: "swimming", scrambled: "gnimmiws" }
     ],
-    color: "#FF3333" // red
+    color: "#FF3333"
   }
-  // Add more levels here...
 ];
 
 let currentLevelIndex = 0;
 let currentWordIndex = 0;
 
-// Function to display the scrambled word
 function displayScrambledWord() {
   const level = levels[currentLevelIndex];
   const scrambledWordElement = document.getElementById("scrambled-word");
   const levelTextElement = document.getElementById("level-text");
   const inputBoxElement = document.getElementById("user-input");
 
-
   scrambledWordElement.textContent = level.words[currentWordIndex].scrambled;
-  // Update the level text
   levelTextElement.textContent = `Level ${level.level}: ${level.theme}`;
-  // Update the input box border color
   inputBoxElement.style.borderColor = level.color;
 }
 
-// Function to check the answer
 function checkAnswer() {
   const userAnswer = document.getElementById("user-input").value.trim().toLowerCase();
   const correctAnswer = levels[currentLevelIndex].words[currentWordIndex].original.toLowerCase();
 
   if (userAnswer === correctAnswer) {
-   
-    // Move to the next word
-    currentWordIndex = (currentWordIndex + 1) ;
-    // If current word index exceeds the number of words, move to the next level
+    currentWordIndex++;
     if (currentWordIndex >= levels[currentLevelIndex].words.length) {
-      currentWordIndex = 0; // Reset word index
-      currentLevelIndex = (currentLevelIndex + 1) ; // Move to next level
-      if(currentLevelIndex >=levels.length) {
+      currentWordIndex = 0;
+      currentLevelIndex++;
+      if (currentLevelIndex >= levels.length) {
         currentLevelIndex = 0;
-        document.getElementById("result").textContent = "You passed all the levels !";
       }
-      else {
-        document.getElementById("result").textContent = "VICTORY ! You moved to next level.";
-      }
-    }
-    else {
-      document.getElementById("result").textContent = "Correct ! This is the next word.";
     }
     displayScrambledWord();
-    document.getElementById("user-input").value = "";  // Clear the input
+    document.getElementById("result").textContent = "Correct! This is the next word.";
   } else {
     document.getElementById("result").textContent = "Incorrect! Try again.";
   }
+
+  document.getElementById("user-input").value = "";
 }
 
-// Initialize the first scrambled word when the page loads
-window.onload = function() {
+// Event listener for level selection
+document.getElementById("level-select").addEventListener("change", function () {
+  currentLevelIndex = parseInt(this.value);
+  currentWordIndex = 0; // Reset word index
   displayScrambledWord();
+});
+
+// Night mode toggle functionality
+document.getElementById("night-mode-toggle").addEventListener("change", function () {
+  document.body.classList.toggle("night-mode");
+});
+
+// Video play/pause functionality
+document.getElementById("play-pause").addEventListener("click", function () {
+  const video = document.getElementById("intro-video");
+  if (video.paused) {
+    video.play();
+    this.textContent = "Pause";
+  } else {
+    video.pause();
+    this.textContent = "Play";
+  }
+});
+
+// Video close functionality
+document.getElementById("close-video").addEventListener("click", function () {
+  const videoOverlay = document.getElementById("video-overlay");
+  videoOverlay.style.display = "none";
+});
+
+// Initialize the game with the first scrambled word
+displayScrambledWord();
+
+module.exports = {
+  levels,
+  displayScrambledWord,
+  checkAnswer
 };
-
-// Get the video element and the play/pause button
-const video = document.getElementById('intro-video');
-const playPauseBtn = document.getElementById('play-pause-btn');
-
-// Function to toggle between play and pause
-function togglePlayPause() {
-    if (video.paused || video.ended) {
-        video.play();
-        playPauseBtn.textContent = 'Pause';
-    } else {
-        video.pause();
-        playPauseBtn.textContent = 'Play';
-    }
-}
-
-// Add click event listener to the button
-playPauseBtn.addEventListener('click', togglePlayPause);
-
