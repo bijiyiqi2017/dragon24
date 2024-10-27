@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 # Dragon Fruit Delight: A Word Scramble Saga
  
@@ -63,6 +63,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Devika-Rudagi"><img src="https://avatars.githubusercontent.com/u/22369957?v=4?s=100" width="100px;" alt="Devika Rudagi"/><br /><sub><b>Devika Rudagi</b></sub></a><br /><a href="https://github.com/bijiyiqi2017/dragon24/commits?author=Devika-Rudagi" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/abbasabro"><img src="https://avatars.githubusercontent.com/u/141827555?v=4?s=100" width="100px;" alt="abbasabro"/><br /><sub><b>abbasabro</b></sub></a><br /><a href="https://github.com/bijiyiqi2017/dragon24/commits?author=abbasabro" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.linkedin.com/in/rajfauzdar"><img src="https://avatars.githubusercontent.com/u/121241266?v=4?s=100" width="100px;" alt="Raj Fauzdar"/><br /><sub><b>Raj Fauzdar</b></sub></a><br /><a href="https://github.com/bijiyiqi2017/dragon24/commits?author=rajfauzdar" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AvinashUmrao"><img src="https://avatars.githubusercontent.com/u/162718233?v=4?s=100" width="100px;" alt="AvinashUmrao"/><br /><sub><b>AvinashUmrao</b></sub></a><br /><a href="https://github.com/bijiyiqi2017/dragon24/commits?author=AvinashUmrao" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
