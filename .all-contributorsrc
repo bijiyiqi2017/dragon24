@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "ruth-chirwa",
+      "name": "Ruth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/129673094?v=4",
+      "profile": "https://github.com/ruth-chirwa",
+      "contributions": [
+        "code",
+        "content"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "dragon24",
+  "projectOwner": "bijiyiqi2017"
+}
