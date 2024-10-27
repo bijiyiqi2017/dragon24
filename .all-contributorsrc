@@ -63,6 +63,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "rajfauzdar",
+      "name": "Raj Fauzdar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/121241266?v=4",
+      "profile": "http://www.linkedin.com/in/rajfauzdar",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
