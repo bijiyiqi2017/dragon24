@@ -16,6 +16,17 @@
         "code",
         "content"
       ]
+    },
+    {
+      "login": "bijiyiqi2017",
+      "name": "William Miller Jr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26510999?v=4",
+      "profile": "https://github.com/bijiyiqi2017",
+      "contributions": [
+        "doc",
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
