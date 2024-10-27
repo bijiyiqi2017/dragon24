@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Introductory Video Overlay -->
     <div id="video-overlay">
       <div id="video-wrapper">
         <video id="intro-video" src="Dragon Fruit Delight.mp4" type="video/mp4"></video>
@@ -18,62 +17,41 @@
       </div>
     </div>
 
-    <!-- Game Content -->
     <div id="game-content">
-      <h1>Welcome to the Dragon Fruit Delight Word Scramble Game!</h1>
+      <h1>Dragon Fruit Delight Word Scramble</h1>
       <p>Unscramble the letters to form a word.</p>
-
-      <p id="scrambled-word"></p>
-      <input type="text" id="user-input" />
-      <button onclick="checkAnswer()">Check Answer</button>
-      <p id="result"></p>
+      <h2 id="level-text">Level 1: Fruits</h2>
+      <div class="timer-container">
+        <div class="timer">01:00</div>
+        <button id="pause-button">Pause</button>
+        <button onclick="resetTimer()" id="reset-button">Reset</button>
+      </div>
+      <button onclick="startThegame()" class="startBtn">Start</button>
+      
+      <div class="game-content-main">
+        <p id="scrambled-word"></p>
+        <input type="text" id="user-input" />
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+      </div>
       <p><strong>How to Play:</strong></p>
       <ol>
         <li>A scrambled word will appear on the screen.</li>
         <li>Type the unscrambled word into the text field.</li>
         <li>Click the "Check Answer" button.</li>
-        <li>
-          If your answer is correct, you'll see a success message, and a new
-          scrambled word will appear.
-        </li>
-        <li>
-          If your answer is incorrect, you'll see a message asking you to try
-          again.
-        </li>
+        <li>If correct, a new scrambled word will appear.</li>
+        <li>If incorrect, try again.</li>
       </ol>
     </div>
 
-
-
-<div class="video-container">
-  <video id="intro-video" controls>
-    <source src="./Dragon Fruit Delight.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="custom-video-controls">
-    <button id="play-pause-btn">Play</button>
-  </div>
-</div>
-
-    <h2 id="level-text">Level 1: Fruits</h2>
-    <p id="scrambled-word"></p>
-    <input type="text" id="user-input" />
-    <button onclick="checkAnswer()">Check Answer</button>
-    <p id="result"></p>
-    <p><strong>How to Play:</strong></p>
-    <ol>
-      <li>A scrambled word will appear on the screen.</li>
-      <li>Type the unscrambled word into the text field.</li>
-      <li>Click the "Check Answer" button.</li>
-      <li>
-        If your answer is correct, you'll see a success message, and a new
-        scrambled word will appear.
-      </li>
-      <li>
-        If your answer is incorrect, you'll see a message asking you to try
-        again.
-      </li>
-    </ol>
+    <div class="video-container">
+      <video id="intro-video" controls>
+        <source src="./Dragon Fruit Delight.mp4" type="video/mp4">
+      </video>
+      <div class="custom-video-controls">
+        <button id="play-pause-btn">Play</button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
