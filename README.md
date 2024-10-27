@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 # Dragon Fruit Delight: A Word Scramble Saga
  
@@ -59,6 +59,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ruth-chirwa"><img src="https://avatars.githubusercontent.com/u/129673094?v=4?s=100" width="100px;" alt="Ruth"/><br /><sub><b>Ruth</b></sub></a><br /><a href="https://github.com/bijiyiqi2017/dragon24/commits?author=ruth-chirwa" title="Code">💻</a> <a href="#content-ruth-chirwa" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bijiyiqi2017"><img src="https://avatars.githubusercontent.com/u/26510999?v=4?s=100" width="100px;" alt="William Miller Jr"/><br /><sub><b>William Miller Jr</b></sub></a><br /><a href="https://github.com/bijiyiqi2017/dragon24/commits?author=bijiyiqi2017" title="Documentation">📖</a> <a href="https://github.com/bijiyiqi2017/dragon24/commits?author=bijiyiqi2017" title="Code">💻</a> <a href="https://github.com/bijiyiqi2017/dragon24/issues?q=author%3Abijiyiqi2017" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hemanthhhhhh"><img src="https://avatars.githubusercontent.com/u/98905333?v=4?s=100" width="100px;" alt="hemanthhhhhh"/><br /><sub><b>hemanthhhhhh</b></sub></a><br /><a href="https://github.com/bijiyiqi2017/dragon24/commits?author=hemanthhhhhh" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Abhinav-Bansal751"><img src="https://avatars.githubusercontent.com/u/118830821?v=4?s=100" width="100px;" alt="Bansal"/><br /><sub><b>Bansal</b></sub></a><br /><a href="https://github.com/bijiyiqi2017/dragon24/commits?author=Abhinav-Bansal751" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
