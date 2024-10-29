@@ -17,7 +17,8 @@ p {
 }
 
 /* Scrambled word display */
-#scrambled-word {
+.scrambled-word {
+  display: none;
   font-size: 24px;
   font-weight: bold;
   color: #bb2d7d;
@@ -240,6 +241,8 @@ li {
   background-color: #0d6fb1;
 }
 
+
+
 /* Night mode styles */
 body.night-mode {
   background-color: #333;
@@ -250,6 +253,7 @@ body.night-mode button {
   background-color: #555;
   color: #f4f4f4;
 }
+
 
 body.night-mode #scrambled-word {
   color: #ffcc00;
@@ -295,3 +299,47 @@ nav ul li a:hover {
 }
 
 
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  /* padding: 20px; */
+}
+.time_btns{
+  margin: 20px;
+}
+.timer {
+  font-size: 80px;
+  font-weight: bold;
+  color: #2D87BB;
+  transition: color 0.5s ease;
+}
+.checkans_btn{
+  display: none;
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+
+.low-time {
+  color: #2D87BB;
+  animation: blink 1s infinite;
+}
+
+.low-low-time {
+  color: #ff0000;
+  animation: blink 1s infinite;
+}
+
+
+.main-game-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
