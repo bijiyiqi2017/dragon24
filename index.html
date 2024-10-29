@@ -53,15 +53,25 @@
 
     <h2 id="level-text">Level 1: Fruits</h2>
     
-    <!-- Display Scrambled Word -->
-    <p id="scrambled-word"></p>
+    <div class="timer-container">
+      <div class="timer">01:00</div>
+    </div>
+    <div class="time_btns">
+    <button id="pause-button">Pause</button>
+    <button onclick="resetTimer()" id="reset-button">Reset</button>
+    </div>
     
-    <!-- Textarea for User Input -->
-    <textarea id="user-input" rows="4" cols="50" placeholder="Type your answer here..."></textarea>
-    
-    <button onclick="checkAnswer()">Check Answer</button>
-    <p id="result"></p>
-    
+    <div class="main-game-content">
+      <!-- Display Scrambled Word -->
+      <p class="scrambled-word"></p>
+      
+      <!-- Textarea for User Input -->
+      <textarea id="user-input" rows="4" cols="50" placeholder="Type your answer here..."></textarea>
+      
+      <button onclick="checkAnswer()" class="checkans_btn">Check Answer</button>
+      <button onclick="startTheGame()" class="startBtn">Start</button>
+    <p class="result_c" id="result"></p>
+    </div>
     <p><strong>How to Play:</strong></p>
     <ol>
         <li>A scrambled word will appear on the screen.</li>
@@ -85,5 +95,6 @@
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
