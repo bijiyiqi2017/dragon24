@@ -1,10 +1,10 @@
+![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 # Dragon Fruit Delight: A Word Scramble Saga
  
-![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 
 
 Welcome to Dragon Fruit Delight, the web browser word scramble game brought to you by "The Dragon 24 Team"! But how did this project come to be?
