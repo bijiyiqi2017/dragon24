@@ -76,6 +76,11 @@ li {
   margin-bottom: 10px;
 }
 
+#retry-button {
+  margin-top: 10px;
+}
+
+
 
 /* CSS to center the video and make it responsive with a 16:9 aspect ratio */
 .video-container {
