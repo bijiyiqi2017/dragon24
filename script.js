@@ -91,7 +91,10 @@ let currentWordIndex = 0;
 let countdown;
 let timeLeft=60;
 let isPaused = false;
-let gameStarted = false;    
+let gameStarted = false;
+const ROUND_SECONDS = 60;   // single source of truth for round length
+let score = 0;              // track score (1 point per correct answer)
+
 
 
 function displayScrambledWord() {
@@ -108,8 +111,9 @@ function displayScrambledWord() {
 
 function startTimer() {
   clearInterval(countdown);
-  timeLeft = 60;
+  timeLeft = ROUND_SECONDS;
   updateTimerDisplay();
+
 
   countdown = setInterval(() => {
     if(!isPaused){
@@ -133,10 +137,9 @@ function startTimer() {
     }
 
     if (timeLeft < 0) {
-      clearInterval(countdown);
-      document.querySelector(".scrambled-word").textContent = "";
-      document.getElementById("result").textContent = "Game Over! Time's up.";
-    }
+      endGame("timeout");
+   }
+
   }
   }, 1000);
 }
@@ -167,6 +170,7 @@ function checkAnswer() {
   const correctAnswer = levels[currentLevelIndex].words[currentWordIndex].original.toLowerCase();
 
   if (userAnswer === correctAnswer) {
+    score+=1;
     currentWordIndex++; // Move to the next word
     
     if (currentWordIndex >= levels[currentLevelIndex].words.length) {
@@ -175,10 +179,7 @@ function checkAnswer() {
       currentLevelIndex++; // Move to the next level
 
       if (currentLevelIndex >= levels.length) {
-        // All levels completed
-        document.getElementById("result").textContent = "You passed all levels!";
-        clearInterval(countdown); // Stop the timer
-        document.querySelector(".scrambled-word").textContent = ""; // Clear scrambled word
+         endGame("completed");
       } else {
         // Moved to the next level successfully
         let time = document.getElementsByClassName("timer")[0].textContent;
@@ -231,6 +232,28 @@ document.getElementById("close-video").addEventListener("click", function () {
   videoOverlay.style.display = "none";
 });
 
+document.getElementById("retry-button").addEventListener("click", () => {
+  // reset all state
+  score = 0;
+  timeLeft = ROUND_SECONDS;
+  currentLevelIndex = 0;
+  currentWordIndex = 0;
+  isPaused = false;
+  gameStarted = true;
+
+  // reset UI
+  document.getElementById("result").textContent = "";
+  document.getElementById("retry-button").style.display = "none";
+  document.querySelector(".startBtn").style.display = "none";
+  document.querySelector(".checkans_btn").style.display = "block";
+  document.querySelector(".scrambled-word").style.display = "block";
+
+  // start fresh
+  displayScrambledWord();
+  startTimer();
+});
+
+
 // Initialize the game with the first scrambled word
 displayScrambledWord();
 
@@ -242,18 +265,48 @@ module.exports = {
 
 
 
+function endGame(reason = "timeout") {
+  // stop timer
+  if (typeof countdown !== "undefined") clearInterval(countdown);
+
+  // compute elapsed time in a robust way (caps at ROUND_SECONDS)
+  const elapsed = Math.min(ROUND_SECONDS, ROUND_SECONDS - Math.max(0, parseInt(timeLeft, 10) || 0));
+
+  // clear UI word
+  const scrambledEl = document.querySelector(".scrambled-word");
+  if (scrambledEl) scrambledEl.textContent = "";
+
+  const resultEl = document.getElementById("result");
+  if (reason === "completed") {
+    resultEl.textContent = `🎉 You passed all levels! Final score: ${score}.`;
+  } else {
+    resultEl.textContent = `⏳ Game Over! You scored ${score} point${score !== 1 ? "s" : ""} in ${elapsed} seconds.`;
+  }
+
+  // show Retry
+  const retryBtn = document.getElementById("retry-button");
+  if (retryBtn) retryBtn.style.display = "inline-block";
+}
+
+
+
+
 
 function startTheGame() {
   document.querySelector(".startBtn").style.display = "none";
   document.querySelector(".checkans_btn").style.display = "block"; 
   gameStarted = true;
+  score = 0;                                 // <-- add
   currentLevelIndex = 0;
   currentWordIndex = 0;
   document.querySelector(".scrambled-word").style.display="block";
   document.getElementById("result").textContent = "";
+  const retryBtn = document.getElementById("retry-button");
+  if (retryBtn) retryBtn.style.display = "none"; // <-- add
   displayScrambledWord();
   startTimer();
 }
+
 
 function resetTimer(){
   isPaused=true;
